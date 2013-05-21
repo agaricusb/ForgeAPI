@@ -41,24 +41,6 @@
       </snapshots>
     </pluginRepository>
   </pluginRepositories>
-  <profiles>
-   <profile>
-    <activation>
-        <activeByDefault>true</activeByDefault>
-    </activation>
-    <id>built</id>
-    <dependencies>
-      <!-- after the remapped artifact is built, add it a dependency -->
-      <dependency>
-        <groupId>net.minecraftforge</groupId>
-        <artifactId>minecraft-forge</artifactId>
-        <version>${forge.version}-${forgemodparent.revision}${forge.suffix}</version>
-        <type>jar</type>
-        <scope>compile</scope>
-      </dependency>
-    </dependencies>
-   </profile>
-  </profiles>
   <dependencies>
     <dependency>
         <groupId>org.ow2.asm</groupId>
@@ -103,10 +85,10 @@
             <version>1.1-SNAPSHOT</version>
             <executions>
                 <execution>
-                    <id>install-remapped-forge</id>
-                    <phase>initialize</phase>
+                    <id>build-remapped-forge</id>
+                    <phase>package</phase>
                     <goals>
-                        <goal>install-remapped-file</goal>
+                        <goal>install-remapped-file</goal> <!-- actually, attaches artifact instead of installing -->
                     </goals>
                     <configuration>
                         <groupId>net.minecraftforge</groupId>
@@ -125,19 +107,8 @@
                             <param>${mod.at}</param> <!-- optional AT from mod itself -->
                         </accessTransformers>
                         <generateAPI>true</generateAPI>
-                    </configuration>
-                </execution>
-                <execution>
-                    <id>reobfuscate</id>
-                    <phase>package</phase>
-                    <goals>
-                        <goal>remap</goal>
-                    </goals>
-                    <configuration>
-                        <srgIn>${reobf.mappings}</srgIn> <!-- mcp csvnames -> mcp srgnames for version-independence -->
-                        <remappedDependencies>
-                            <param>net.minecraftforge:minecraft-forge:${forge.version}-${forgemodparent.revision}${forge.suffix}:jar</param>
-                        </remappedDependencies>
+                        <installArtifact>false</installArtifact>
+                        <attachArtifact>true</attachArtifact>
                     </configuration>
                 </execution>
             </executions>
