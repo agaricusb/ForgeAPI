@@ -109,6 +109,8 @@
                         <generateAPI>true</generateAPI>
                         <installArtifact>false</installArtifact>
                         <replaceMainArtifact>true</replaceMainArtifact>
+                        <attachArtifact>true</attachArtifact>
+                        <attachArtifactClassifier>api</attachArtifactClassifier>
                     </configuration>
                 </execution>
             </executions>
