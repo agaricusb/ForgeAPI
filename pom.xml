@@ -9,7 +9,7 @@
   <artifactId>ForgeAPI</artifactId>
   <version>1.5.2-7.8.0-SNAPSHOT</version> <!-- ${minecraft.version}-${forge.mainversion}-SNAPSHOT -->
   <name>ForgeAPI</name>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
   <url>https://github.com/agaricusb/ForgeAPI</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
