@@ -108,7 +108,7 @@
                         </accessTransformers>
                         <generateAPI>true</generateAPI>
                         <installArtifact>false</installArtifact>
-                        <attachArtifact>true</attachArtifact>
+                        <replaceMainArtifact>true</replaceMainArtifact>
                     </configuration>
                 </execution>
             </executions>
