@@ -18,7 +18,6 @@
     <forge.majorversion>7</forge.majorversion>
     <forge.minorversion>8</forge.minorversion>
     <forge.revisionversion>1</forge.revisionversion>
-    <forge.build>738</forge.build>
     <forge.mainversion>${forge.majorversion}.${forge.minorversion}.${forge.revisionversion}</forge.mainversion>
     <forge.version>${forge.mainversion}.${forge.build}</forge.version>
     <forgemodparent.revision>R3</forgemodparent.revision> <!-- increment when this parent pom is updated -->
@@ -29,6 +28,30 @@
     <mod.at></mod.at> <!-- optional access transformer if required by the mod -->
     <forge.suffix></forge.suffix> <!-- set for modified versions of forge (coremods) -->
   </properties>
+  <profiles>
+    <profile>
+      <id>static_forge_build</id>
+      <activation>
+        <property>
+          <name>!env.FORGE_BUILD</name>
+        </property>
+      </activation>
+      <properties>
+        <forge.build>738</forge.build>
+      </properties>
+    </profile> 
+    <profile>
+      <id>dynamic_build_number</id>
+      <activation>
+        <property>
+          <name>env.FORGE_BUILD</name>
+        </property>
+      </activation>
+      <properties>
+        <forge.build>${env.FORGE_BUILD}</forge.build>
+      </properties>
+    </profile>
+  </profiles>
   <pluginRepositories>
     <pluginRepository>
       <id>sonatype-oss-public</id>
