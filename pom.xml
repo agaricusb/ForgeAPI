@@ -7,7 +7,7 @@
   </parent>
   <groupId>net.md-5</groupId>
   <artifactId>ForgeAPI</artifactId>
-  <version>1.5.2-7.8.0-SNAPSHOT</version> <!-- ${minecraft.version}-${forge.mainversion}-SNAPSHOT -->
+  <version>1.5.2-7.8.1-SNAPSHOT</version> <!-- ${minecraft.version}-${forge.mainversion}-SNAPSHOT -->
   <name>ForgeAPI</name>
   <packaging>jar</packaging>
   <url>https://github.com/agaricusb/ForgeAPI</url>
@@ -17,8 +17,8 @@
     <minecraft_version>1_5_2</minecraft_version>
     <forge.majorversion>7</forge.majorversion>
     <forge.minorversion>8</forge.minorversion>
-    <forge.revisionversion>0</forge.revisionversion>
-    <forge.build>703</forge.build>
+    <forge.revisionversion>1</forge.revisionversion>
+    <forge.build>738</forge.build>
     <forge.mainversion>${forge.majorversion}.${forge.minorversion}.${forge.revisionversion}</forge.mainversion>
     <forge.version>${forge.mainversion}.${forge.build}</forge.version>
     <forgemodparent.revision>R3</forgemodparent.revision> <!-- increment when this parent pom is updated -->
