@@ -23,7 +23,7 @@
     <fml.at>https://raw.github.com/MinecraftForge/FML/1d0384f8f664d7002019b865675a5fddf2963b3d/common/fml_at.cfg</fml.at>
     <forge.at>https://raw.github.com/MinecraftForge/MinecraftForge/85fd1d010dd408d988fbe4cab7226f432f316365/common/forge_at.cfg</forge.at>
     <mcp.mappings>https://raw.github.com/MinecraftForge/FML/bab4d87ce76baa40200939cc46780b1d3b2ff466/conf/</mcp.mappings>
-    <reobf.mappings>https://raw.github.com/agaricusb/MinecraftRemapping/1f1f64f2f92a3f79c9e6fcc877c6c01e096b0a68/1.6.2/pkgmcp2numpkg.srg</reobf.mappings>
+    <reobf.mappings>https://raw.github.com/agaricusb/MinecraftRemapping/8ca7ba25dfd67eae43b3c73d02603ff6c085a6d7/1.6.2/pkgmcp2numpkg.srg</reobf.mappings>
     <mod.at></mod.at> <!-- optional access transformer if required by the mod -->
     <forge.suffix></forge.suffix> <!-- set for modified versions of forge (coremods) -->
   </properties>
